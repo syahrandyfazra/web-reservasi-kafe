@@ -283,7 +283,7 @@
         });
 
         function updateRecommendations() {
-            // Find all selected menu IDs
+            // 1. Ambil semua ID menu yang sedang dipilih (qty > 0)
             const selectedMenuIds = [];
             qtyInputs.forEach(input => {
                 if ((parseInt(input.value) || 0) > 0) {
@@ -291,19 +291,20 @@
                 }
             });
 
-            // Find recommended menu IDs based on selected ones
+            // 2. Cari rekomendasi berdasarkan ID menu yang dipilih
             let recIds = new Set();
             selectedMenuIds.forEach(id => {
                 if (recommendations[id]) {
                     recommendations[id].forEach(recId => {
-                        // Don't recommend items already selected
+                        // Pastikan menu rekomendasi tidak ditambahkan jika sudah dipilih/dibeli oleh pengguna
                         if (!selectedMenuIds.includes(String(recId))) {
                             recIds.add(String(recId));
                         }
                     });
                 }
             });
-
+            
+            // 3. Tampilkan rekomendasi di UI (User Interface)
             if (recIds.size > 0 && selectedMenuIds.length > 0) {
                 recommendationContainer.classList.remove('hidden');
                 recommendationList.innerHTML = '';

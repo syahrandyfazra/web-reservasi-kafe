@@ -59,7 +59,7 @@
                                                     class="btn btn-sm btn-outline-info btn-custom py-1 px-2 js-show-receipt"
                                                     data-bs-toggle="modal"
                                                     data-bs-target="#receiptModal"
-                                                    data-receipt-src="{{ asset('storage/'.$pay->bukti_bayar) }}"
+                                                    data-receipt-src="{{ asset('storage/' . $pay->bukti_bayar) }}"
                                                     data-receipt-code="{{ $pay->reservasi->kode_reservasi }}"
                                                 >
                                                     <i class="bi bi-eye-fill me-1"></i> Lihat Bukti
