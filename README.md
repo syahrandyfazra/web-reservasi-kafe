@@ -142,10 +142,10 @@ Admin dapat:
 
 Sistem memiliki dua role utama:
 
-| Role        | Keterangan                                          |
-| ----------- | --------------------------------------------------- |
-| `admin`     | Mengelola seluruh data dan proses operasional kafe  |
-| `pelanggan` | Melakukan reservasi, pemesanan menu, dan pembayaran |
+| Role        | Keterangan                                          | Login Akun Admin                                    |
+| ----------- | --------------------------------------------------- | --------------------------------------------------- |
+| `admin`     | Mengelola seluruh data dan proses operasional kafe  | admin@gmail.com                                     |
+| `pelanggan` | Melakukan reservasi, pemesanan menu, dan pembayaran | admin123                                            |
 
 Selain pelanggan yang memiliki akun, sistem juga menyediakan **guest reservation** untuk melakukan reservasi tanpa login.
 
